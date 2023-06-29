@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 import Checkbox from './Checkbox';
+import '../CSS/Filter.css';
 
 function Filter(props) {
   const {

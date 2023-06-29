@@ -2,6 +2,7 @@ import { useState } from 'react';
 import CardList from '../components/CardList.jsx';
 import Filter from '../components/Filter.jsx';
 import datas from '../datas/datas.js';
+import '../CSS/CardPage.css';
 
 function CardPage() {
   const ram = ['4', '8', '16'];

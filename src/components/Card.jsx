@@ -13,7 +13,7 @@ function Card(props) {
     reconditionned,
     ram,
     newMobile,
-    good
+    good,
   } = props;
   return (
     <div className='card'>
@@ -26,11 +26,14 @@ function Card(props) {
           <li>RAM {ram} Go</li>
           <li>Stockage {storage} Go</li>
           <li>{screen} pouces</li>
-          <li>Réseau : {network ? '5G' : '4G'}</li>
-          <li>{price}</li>
-          <li>téléphone reconditionné: {reconditionned ? 'vrai' : 'faux'}</li>
+          <li>Réseau {network ? '5G' : '4G'}</li>
+          <li>Prix {price}</li>
+          <li>
+            Téléphone reconditionné:{' '}
+            {reconditionned ? <span>&#9989;</span> : <span>&#10060;</span>}
+          </li>
           <li>{newMobile ? 'Etat neuf' : 'Occasion'}</li>
-          <li>{good ? 'Bon état' : 'Mauvais état'}</li>
+          <li>{!newMobile ? (good ? 'Bon état' : 'Mauvais état') : null}</li>
         </ul>
       </div>
     </div>
